@@ -13,11 +13,14 @@ import "./SimpleStorage.sol";
 contract StorageFactory {
     //WE ARE CREATING A FUNCTION FOR DEPLOYING OF ANOTHER IMPORTED
     // CONTRACT AND SAVING IT TO THE GLOBAL VARIALBE
-    
-    SimpleStorage public simpleStorage;
+     
+    SimpleStorage[] public simpleStorageArray;
+    //creating an array for deploying multiple contracts
 
     function createSimpleStorageContract() public {
-        simpleStorage = new SimpleStorage();
+
+      SimpleStorage  simpleStorage = new SimpleStorage();
+      simpleStorageArray.push(simpleStorage);
     }
 
 }
