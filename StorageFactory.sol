@@ -41,4 +41,13 @@ contract StorageFactory {
    simpleStorage.store(_simpleStorageNumber); //simpleStorageNumber cuvas u toj funkciju store iz drugog ugovora
 
      }
+
+     //dodajemo funkciju retrieve iz drugog ugovora, koja samo vraca vrednost, koja je u ovom slucaju jednaka vrednosti _simpleStorageNumber iz funkcije sfStore
+     //funkciju public moze svako da pozove
+     function sfGet(uint256 _simpleStorageIndex) public view returns (uint256){
+      
+       SimpleStorage simpleStorage = simpleStorageArray[_simpleStorageIndex]; //this is the same as SimpleStorage(simpleStorageArray[simpleStorageIndex]);
+       return simpleStorage.retrieve();
+     }
+
       }
