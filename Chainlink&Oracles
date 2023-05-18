@@ -1,0 +1,11 @@
+-we need to use decentralised Oracle Network to get the price of one Ether it terms of USD
+
+-Blockchain Oracle: Any device that interacts with the off-chain world to provide external data or computation to smart contracts 
+
+-decimals don't actually 'work well' in solidity
+
+-Chainlink VRF -way to get get provably random numbers from the real world into our smart contracts
+
+-Chainlink keepers- are way to do decentralized event driven computation
+
+-You can send API request with smart contracts , but you need to make your own network, they don't come with decentralised oracle network
